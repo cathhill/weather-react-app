@@ -30,10 +30,41 @@ export default function Search() {
   }
 
   let form = (
-    <form onSubmit={handleSubmit}>
-      <input type="search" placeholder="Enter a city" onChange={updateCity} />
-      <input type="submit" value="Search" />
+      <div className="Form">
+    <form className="search-form" id="search-form" onSubmit={handleSubmit}>
+        <div className="row">
+        <div className="col-6">
+      <input 
+        type="search" 
+        placeholder="Choose a city" 
+        onChange={updateCity} 
+         autoFocus="on"      
+        autoComplete="off"
+        id="city-input"
+        />
+</div>
+    <div className="col-3">
+      <button 
+        type="submit" 
+        value="" 
+        className="form-control btn btn-primary change-city shadow-sm"
+        >
+        <i className="fas fa-search"></i>
+    </button>
+    </div>
+
+    <div className="col-3">
+            <button
+              type="submit"
+              value=""
+              className="form-control btn btn-primary current-city shadow-sm"
+            >
+              <i className="fas fa-map-pin"></i>
+            </button>
+            </div>
+            </div>
     </form>
+    </div>
   );
   //no data to display if not sent anything to axios. If loaded=true:
   if (loaded) {
