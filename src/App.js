@@ -11,13 +11,9 @@ function App() {
   return (
     <div className="App">
       <Search />
-
-      <Weather city="Vienna" />
-
+      <Weather city="London" />
       <Today />
-
       <Forecast />
-
       <Footer />
     </div>
   );

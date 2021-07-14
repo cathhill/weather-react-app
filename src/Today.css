@@ -1,5 +1,9 @@
+.Today {
+  margin: 40px 0 20px 0;
+}
+
 .Today ul {
-  margin: 0 0 10px;
+  margin: 0 0 40px;
   padding: 0;
 }
 

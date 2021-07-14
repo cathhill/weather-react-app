@@ -9,7 +9,7 @@ export default function Today() {
         <li id="current-date">date</li>
         <li id="description">partly cloudy</li>
       </ul>
-      <div className="row today">
+      <div className="row">
         <div className="col-6">
           <div className="clearfix weather-temperature">
             <img
