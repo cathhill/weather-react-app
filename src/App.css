@@ -9,17 +9,6 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
 .App-link {
   color: #61dafb;
 }
@@ -42,21 +31,6 @@ body {
   background-repeat: no-repeat;
 }
 
-h1 {
-  margin-bottom: 0;
-  font-size: 70px;
-  text-align: left;
-}
-
-ul {
-  margin: 0 0 10px;
-  padding: 0;
-}
-li {
-  list-style: none;
-  font-size: 16px;
-}
-
 .container {
   border: blue solid 2px;
   padding: 20px;
@@ -64,80 +38,10 @@ li {
   border-radius: 10px;
   background-image: linear-gradient(-180deg, #9d65c9 25%, #27296d 95%);
 }
-.city {
-  padding: 20px 0;
-  font-size: 40px;
-}
 
-.choose-city {
-  text-align: left;
-  display: inline;
-  vertical-align: middle;
-}
-
-.change-city {
-  background-color: #a393eb;
-}
-
-.current-city {
-  background-color: #a393eb;
-}
-
-.col {
-  text-align: center;
-}
-
-.col-3 {
-  text-align: left;
-}
-
-#description::first-letter {
-  text-transform: capitalize;
-}
-
-#current-icon {
-  width: 100px;
-  height: 100px;
-}
-
-.today {
-  width: 100%;
-  margin: 30px 20px;
-}
-
-.today-temp {
-  font-size: 80px;
-}
-.temp-unit {
-  position: relative;
-}
-#units {
-  font-size: 15px;
-  top: -40px;
-}
-
-.cloud-sun {
-  font-size: 100px;
-  color: rgb(255, 230, 0);
-}
-
-a {
-  color: white;
-}
 footer {
   margin: 0 30px;
   font-size: 12px;
-}
-#units .active {
-  color: white;
-  cursor: default;
-  text-decoration: none;
-  position: absolute;
-  top: 10px;
-}
-
-#units .active:hover {
-  text-decoration: none;
 }
 
 .weather-forecast {

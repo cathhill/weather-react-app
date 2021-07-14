@@ -10,23 +10,30 @@ export default function Today() {
         <li id="description">partly cloudy</li>
       </ul>
       <div className="row today">
-        <div className="col-4">
-          <img src="" id="current-icon" alt="weather-icon" />
+        <div className="col-6">
+          <div className="clearfix weather-temperature">
+            <img
+              src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+              alt="weather-icon"
+              className="float-left current-icon"
+            />
+            <div className="float-left">
+              <strong>20</strong>
+              <span className="units">
+                <a href="/">°C</a> | <a href="/">°F</a>
+              </span>
+            </div>
+          </div>
         </div>
-        <div className="col-4 temp-unit">
-          <h1>
-            <span id="today-temp">20</span>
-            <span id="units">
-              <a href="/" id="celsius-temperature" className="units active">
-                °C{" "}
-              </a>
-            </span>
-          </h1>
-        </div>
-        <div className="col-4">
-          Wind <span id="wind">10</span> m/s
-          <br />
-          Humidity <span id="humidity">70</span>%
+        <div className="col-6">
+          <ul>
+            <li>
+              Wind <span className="wind">10</span> m/s
+            </li>
+            <li>
+              Humidity <span id="humidity">70</span>%
+            </li>
+          </ul>
         </div>
       </div>
     </div>

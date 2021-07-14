@@ -1,9 +1,3 @@
-.Today h1 {
-  margin-bottom: 0;
-  font-size: 70px;
-  text-align: left;
-}
-
 .Today ul {
   margin: 0 0 10px;
   padding: 0;
@@ -14,51 +8,39 @@
   font-size: 16px;
 }
 
-.Today .col {
-  text-align: center;
-}
-
-.Today .col-3 {
-  text-align: left;
-}
-
 .Today #description::first-letter {
   text-transform: capitalize;
 }
 
-.Today #current-icon {
-  width: 100px;
-  height: 100px;
+.Today .weather-temperature img {
+  margin-right: 5px;
+  height: 64px;
+  width: 64px;
+  float: left;
 }
 
-.Today .today {
-  width: 100%;
-  margin: 30px 20px;
+.Today .weather-temperature {
 }
 
-.Today .today-temp {
-  font-size: 80px;
+.Today .weather-temperature strong {
+  color: white;
+  font-size: 64px;
+  line-height: 1;
+  font-weight: 400;
+  float: left;
 }
 
-.Today .temp-unit {
+.Today .units {
   position: relative;
-}
-
-.Today #units {
-  font-size: 15px;
-  top: -40px;
-}
-
-.Today .cloud-sun {
-  font-size: 100px;
-  color: rgb(255, 230, 0);
+  font-size: 16px;
+  top: 0px;
 }
 
 .Today a {
   color: white;
 }
 
-.Today #units .active {
+.Today .active {
   color: white;
   cursor: default;
   text-decoration: none;
@@ -66,6 +48,6 @@
   top: 10px;
 }
 
-.Today #units .active:hover {
+.Today .active:hover {
   text-decoration: none;
 }
