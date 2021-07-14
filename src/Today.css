@@ -1,62 +1,64 @@
-Today.h1 {
+.Today h1 {
   margin-bottom: 0;
   font-size: 70px;
   text-align: left;
-  color: red;
 }
 
-ul {
+.Today ul {
   margin: 0 0 10px;
   padding: 0;
 }
-li {
+
+.Today li {
   list-style: none;
   font-size: 16px;
 }
 
-.col {
+.Today .col {
   text-align: center;
 }
 
-.col-3 {
+.Today .col-3 {
   text-align: left;
 }
 
-#description::first-letter {
+.Today #description::first-letter {
   text-transform: capitalize;
 }
 
-#current-icon {
+.Today #current-icon {
   width: 100px;
   height: 100px;
 }
 
-.today {
+.Today .today {
   width: 100%;
   margin: 30px 20px;
 }
 
-.today-temp {
+.Today .today-temp {
   font-size: 80px;
 }
-.temp-unit {
+
+.Today .temp-unit {
   position: relative;
 }
-#units {
+
+.Today #units {
   font-size: 15px;
   top: -40px;
 }
 
-.cloud-sun {
+.Today .cloud-sun {
   font-size: 100px;
   color: rgb(255, 230, 0);
 }
 
-a {
+.Today a {
   color: white;
 }
 
-#units .active {
+.Today #units .active {
   color: white;
   cursor: default;
   text-decoration: none;
@@ -64,6 +66,6 @@ a {
   top: 10px;
 }
 
-#units .active:hover {
+.Today #units .active:hover {
   text-decoration: none;
 }
