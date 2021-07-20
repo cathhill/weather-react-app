@@ -3,18 +3,24 @@ import Weather from "./Weather";
 import Search from "./Search";
 import Today from "./Today";
 import Forecast from "./Forecast";
-import Footer from "./Footer";
 
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <Search />
-      <Weather city="London" />
-      <Today />
-      <Forecast />
-      <Footer />
+      <div className="container">
+        <Search />
+        <Weather city="London" />
+        <Today />
+        <Forecast />
+      </div>
+      <footer>
+        <a href="https://github.com/cathhill/weather-project.git">
+          Open-source code
+        </a>
+        by Catherine Hill
+      </footer>
     </div>
   );
 }
