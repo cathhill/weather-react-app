@@ -1,0 +1,76 @@
+.Weather .city {
+  padding: 20px 0;
+  font-size: 40px;
+}
+
+.Weather .choose-city {
+  text-align: left;
+  display: inline;
+  vertical-align: middle;
+}
+
+.Weather .change-city {
+  background-color: #a393eb;
+}
+
+.Weather .current-city {
+  background-color: #a393eb;
+}
+
+.Weather {
+  margin: 40px 0 20px 0;
+}
+
+.Weather ul {
+  margin: 0 0 40px;
+  padding: 0;
+}
+
+.Weather li {
+  list-style: none;
+  font-size: 16px;
+}
+
+.Weather #description::first-letter {
+  text-transform: capitalize;
+}
+
+.Weather .weather-temperature img {
+  margin-right: 5px;
+  height: 64px;
+  width: 64px;
+  float: left;
+}
+
+.Weather .weather-temperature {
+}
+
+.Weather .weather-temperature strong {
+  color: white;
+  font-size: 64px;
+  line-height: 1;
+  font-weight: 400;
+  float: left;
+}
+
+.Weather .units {
+  position: relative;
+  font-size: 16px;
+  top: 0px;
+}
+
+.Weather a {
+  color: white;
+}
+
+.Weather .active {
+  color: white;
+  cursor: default;
+  text-decoration: none;
+  position: absolute;
+  top: 10px;
+}
+
+.Weather .active:hover {
+  text-decoration: none;
+}
