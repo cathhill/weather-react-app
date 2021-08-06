@@ -29,14 +29,13 @@
   text-transform: capitalize;
 }
 
-.Weather .weather-temperature img {
+.Weather canvas {
   margin-right: 5px;
-  height: 64px;
-  width: 64px;
-  float: left;
+  margin-top: 5px;
+  display: inline-block;
 }
 
-.Weather .weather-temperature strong {
+.WeatherTemperature {
   color: white;
   font-size: 64px;
   line-height: 1;
@@ -44,12 +43,17 @@
   float: left;
 }
 
-.Weather .units {
+.WeatherTemperature .units {
   position: relative;
   font-size: 16px;
   top: 0px;
+  text-decoration: none;
 }
 
-.Weather a {
-  color: white;
+.WeatherTemperature a {
+  text-decoration: none;
+}
+
+.WeatherTemperature a:hover {
+  text-decoration: underline;
 }
