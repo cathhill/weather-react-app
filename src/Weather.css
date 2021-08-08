@@ -40,7 +40,15 @@
   font-size: 64px;
   line-height: 1;
   font-weight: 400;
-  float: left;
+  display: inline;
+}
+
+.weather-temperature {
+  display: inline;
+}
+
+.float-left {
+  display: inline;
 }
 
 .WeatherTemperature .units {
