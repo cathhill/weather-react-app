@@ -12,9 +12,9 @@ export default function App() {
         <Forecast />
       </div>
       <footer>
-        <a href="https://github.com/cathhill/weather-project.git">
+        <a href="https://github.com/cathhill/weather-react-app.git">
           Open-source code
-        </a>
+        </a>{" "}
         by Catherine Hill
       </footer>
     </div>
