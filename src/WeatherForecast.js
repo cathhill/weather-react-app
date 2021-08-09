@@ -29,13 +29,13 @@ export default function WeatherForecast(props) {
   if (loaded) {
     return (
       <div className="WeatherForecast">
-        <div class="row">
+        <div className="row">
           {/* loops through the forecast array */}
           {forecast.map(function (dailyForecast, index) {
             //stops the loop showing more than 5 additional days as 8 available
             if (index < 5) {
               return (
-                <div class="col" key={index}>
+                <div className="col" key={index}>
                   <WeatherForecastDay data={dailyForecast} />
                 </div>
               );
