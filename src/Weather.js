@@ -8,6 +8,28 @@ export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
 
+  function getCityName(response) {
+    console.log(response.data.name);
+    setCity(response.data.name);
+    console.log(city);
+    search(city);
+  }
+
+  function showPosition(position) {
+    console.log(position);
+    let latitude = position.coords.latitude;
+    let longitude = position.coords.longitude;
+    let units = "metric";
+    let apiKey = "66decd6fe52d82f120eb1be8f6e6d5d8";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
+    axios.get(`${apiUrl}&appid=${apiKey}`).then(getCityName);
+  }
+
+  function handleLocationSubmit(event) {
+    event.preventDefault();
+    navigator.geolocation.getCurrentPosition(showPosition);
+  }
+
   function handleResponse(response) {
     setWeatherData({
       ready: true,
@@ -60,16 +82,18 @@ export default function Weather(props) {
                 <i className="fas fa-search"></i>
               </button>
             </div>
+          </div>
+        </form>
 
-            <div className="col-3">
-              <button
-                type="submit"
-                value=""
-                className="form-control btn btn-primary current-city shadow-sm"
-              >
-                <i className="fas fa-map-pin"></i>
-              </button>
-            </div>
+        <form className="search-form" onSubmit={handleLocationSubmit}>
+          <div className="col-3">
+            <button
+              type="submit"
+              value=""
+              className="form-control btn btn-primary current-city shadow-sm"
+            >
+              <i className="fas fa-map-pin"></i>
+            </button>
           </div>
         </form>
         <WeatherInfo data={weatherData} />
