@@ -8,6 +8,7 @@ export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
 
+  //use city name to setCity so a weather data can be searched for
   function getCityName(response) {
     console.log(response.data.name);
     setCity(response.data.name);
@@ -15,6 +16,7 @@ export default function Weather(props) {
     search(city);
   }
 
+  //get city name from coordinates
   function showPosition(position) {
     console.log(position);
     let latitude = position.coords.latitude;
@@ -25,6 +27,7 @@ export default function Weather(props) {
     axios.get(`${apiUrl}&appid=${apiKey}`).then(getCityName);
   }
 
+  //get coordinates of current location if pin clicked
   function handleLocationSubmit(event) {
     event.preventDefault();
     navigator.geolocation.getCurrentPosition(showPosition);
@@ -44,6 +47,7 @@ export default function Weather(props) {
     });
   }
 
+  //search by city name
   function search() {
     const apiKey = "66decd6fe52d82f120eb1be8f6e6d5d8";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
@@ -61,7 +65,7 @@ export default function Weather(props) {
 
   if (weatherData.ready) {
     return (
-      <div className="Weather">
+      <div className="Weather clearfix">
         <form className="search-form" onSubmit={handleSubmit}>
           <div className="row">
             <div className="col-6">
@@ -71,13 +75,14 @@ export default function Weather(props) {
                 autoFocus="on"
                 autoComplete="off"
                 onChange={handleCityChange}
+                className="form-control btn-primary shadow-sm choose-city float-left"
               />
             </div>
             <div className="col-3">
               <button
                 type="submit"
                 value=""
-                className="form-control btn btn-primary change-city shadow-sm"
+                className="form-control btn btn-primary change-city shadow-sm float-left"
               >
                 <i className="fas fa-search"></i>
               </button>
@@ -90,7 +95,7 @@ export default function Weather(props) {
             <button
               type="submit"
               value=""
-              className="form-control btn btn-primary current-city shadow-sm"
+              className="form-control btn btn-primary current-city shadow-sm float-left"
             >
               <i className="fas fa-map-pin"></i>
             </button>
