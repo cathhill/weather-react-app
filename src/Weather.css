@@ -20,7 +20,7 @@
 }
 
 .Weather ul {
-  margin: 0 0 40px;
+  margin: 0 0 30px;
   padding: 0;
 }
 
@@ -34,17 +34,21 @@
 }
 
 .Weather canvas {
-  margin-right: 5px;
-  margin-top: 5px;
+  margin-right: 10px;
+
   display: inline-block;
 }
-
+.WeatherInfo .row {
+  margin-bottom: 20px;
+}
 .WeatherTemperature {
   color: white;
   font-size: 64px;
   line-height: 1;
   font-weight: 400;
   display: inline;
+  padding-bottom: 40px;
+  vertical-align: top;
 }
 
 .weather-temperature {
@@ -58,7 +62,7 @@
 .WeatherTemperature .units {
   position: relative;
   font-size: 16px;
-  top: 0px;
+  top: -35px;
   text-decoration: none;
 }
 

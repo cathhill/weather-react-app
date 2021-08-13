@@ -68,7 +68,7 @@ export default function Weather(props) {
       <div className="Weather clearfix">
         <form className="search-form" onSubmit={handleSubmit}>
           <div className="row">
-            <div className="col-6">
+            <div className="col-9">
               <input
                 type="search"
                 placeholder="Choose a city"
