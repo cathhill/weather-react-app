@@ -8,14 +8,6 @@ export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
 
-  //use city name to setCity so a weather data can be searched for
-  function getCityName(response) {
-    console.log(response.data.name);
-    setCity(response.data.name);
-    console.log(city);
-    search(city);
-  }
-
   //get city name from coordinates
   function showPosition(position) {
     console.log(position);
@@ -24,7 +16,7 @@ export default function Weather(props) {
     let units = "metric";
     let apiKey = "66decd6fe52d82f120eb1be8f6e6d5d8";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
-    axios.get(`${apiUrl}&appid=${apiKey}`).then(getCityName);
+    axios.get(`${apiUrl}&appid=${apiKey}`).then(handleResponse);
   }
 
   //get coordinates of current location if pin clicked

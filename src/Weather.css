@@ -8,6 +8,7 @@
 
 .Weather .choose-city {
   background-color: #ffffff;
+  color: gray;
 }
 
 .Weather .current-city {
