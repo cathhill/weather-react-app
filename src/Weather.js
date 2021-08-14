@@ -58,41 +58,42 @@ export default function Weather(props) {
   if (weatherData.ready) {
     return (
       <div className="Weather clearfix">
-        <form className="search-form" onSubmit={handleSubmit}>
-          <div className="row">
-            <div className="col-9">
-              <input
-                type="search"
-                placeholder="Choose a city"
-                autoFocus="on"
-                autoComplete="off"
-                onChange={handleCityChange}
-                className="form-control btn-primary shadow-sm choose-city float-left"
-              />
-            </div>
-            <div className="col-3">
+        <div className="row">
+          <div className="col-9">
+            <form className="search-form input-group" onSubmit={handleSubmit}>
+              <div className="col-8">
+                <input
+                  type="search"
+                  placeholder="Choose a city"
+                  autoFocus="on"
+                  autoComplete="off"
+                  onChange={handleCityChange}
+                  className="form-control btn-primary shadow-sm choose-city float-left"
+                />
+              </div>
+              <div className="col-4">
+                <button
+                  type="submit"
+                  value=""
+                  className="form-control btn btn-primary change-city shadow-sm float-left"
+                >
+                  <i className="fas fa-search"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+          <div className="col-3">
+            <form className="search-form" onSubmit={handleLocationSubmit}>
               <button
                 type="submit"
                 value=""
-                className="form-control btn btn-primary change-city shadow-sm float-left"
+                className="form-control btn btn-primary current-city shadow-sm float-left"
               >
-                <i className="fas fa-search"></i>
+                <i className="fas fa-map-pin"></i>
               </button>
-            </div>
+            </form>
           </div>
-        </form>
-
-        <form className="search-form" onSubmit={handleLocationSubmit}>
-          <div className="col-3">
-            <button
-              type="submit"
-              value=""
-              className="form-control btn btn-primary current-city shadow-sm float-left"
-            >
-              <i className="fas fa-map-pin"></i>
-            </button>
-          </div>
-        </form>
+        </div>
         <WeatherInfo data={weatherData} />
         <WeatherForecast coordinates={weatherData.coordinates} />
       </div>

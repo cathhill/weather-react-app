@@ -13,6 +13,7 @@
 
 .Weather .current-city {
   background-color: #a393eb;
+  padding: 6px 12px 6px 15px;
 }
 
 .Weather .city {
@@ -73,4 +74,10 @@
 
 .WeatherTemperature a:hover {
   text-decoration: underline;
+}
+.Weather .col-9 {
+  padding-right: 0px;
+}
+.Weather .col-4 {
+  padding-left: 15px;
 }
